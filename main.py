@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
+import pycaret
 from pycaret.classification import load_model
-
 
 # Load the trained model
 saved_final_model = load_model('classification_titanic')
