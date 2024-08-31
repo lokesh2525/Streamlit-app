@@ -1,10 +1,9 @@
 import streamlit as st
 import pandas as pd
-import pycaret
-from pycaret.classification import load_model
+import joblib
 
-# Load the trained model
-saved_final_model = load_model('classification_titanic')
+# Load the saved model
+saved_final_model = joblib.load('classification_titanic.pkl')
 
 # Function to preprocess user input
 def preprocess_input(pclass, sex, age, sibsp, parch, fare, cabin, embarked):
